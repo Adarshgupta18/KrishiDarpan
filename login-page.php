@@ -39,26 +39,7 @@ body {
 	display:none;
 }
 
- .speech {
-        border: 1px solid #DDD;
-        width:300px;
-        padding:0;
-        margin:0
-      }
-
-      .speech input {
-        border:0;
-        width:240px;
-        display:inline-block;
-        height:30px;
-        font-size: 14px;
-      }
-
-      .speech img {
-        float:right;
-        width:40px
-      }
-
+ 
    
 </style>
     <body>
@@ -76,7 +57,7 @@ body {
                                 <div class="form-group">
                                 	
                                     <input class="form-control" placeholder="Username" id="user_name" type="text" autofocus>
-                                    <img onclick="startDictation()" src="https://i.imgur.com/cHidSVu.gif" />
+                                   
                                 
                                 </div>
                                 </div>
@@ -84,7 +65,7 @@ body {
                                 	<div class="speech">
 
                                     <input class="form-control" placeholder="Password" id="user_pass" type="password" value="">
-                                    <img onclick="startDictation()" src="https://i.imgur.com/cHidSVu.gif" />
+                                   
                                 </div>
                             </div>
                                 <button class="btn btn-lg btn-success btn-block submitBtn" type="button">Login</button>
@@ -105,33 +86,8 @@ body {
         <script src="js/jquery.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        
         <script>
-
-      function startDictation() {
-
-        if (window.hasOwnProperty('webkitSpeechRecognition')) {
-
-          var recognition = new webkitSpeechRecognition();
-
-          recognition.continuous = false;
-          recognition.interimResults = false;
-          recognition.lang = "en-US";
-          recognition.start();
-
-          recognition.onresult = function (e) {
-            document.getElementById('transcript').value = e.results[0][0].transcript;
-            recognition.stop();
-            document.getElementById('labnol').submit();
-          };
-          recognition.onerror = function(e) {
-            recognition.stop();
-          }
-        }
-      }
-
-    </script>
-
-		<script>
 	$("#user_name").on("keyup",function(e){
 		$("#user_name").css("border","1px solid #ccc");
 		$(".alert_fail").css("display","none");
