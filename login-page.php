@@ -40,6 +40,7 @@ body {
 }
 
  
+
    
 </style>
     <body>
@@ -58,7 +59,6 @@ body {
                                 	
                                     <input class="form-control" placeholder="Username" id="user_name" type="text" autofocus>
                                    
-                                
                                 </div>
                                 </div>
                                 <div class="form-group">
@@ -86,8 +86,8 @@ body {
         <script src="js/jquery.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        
-        <script>
+       
+		<script>
 	$("#user_name").on("keyup",function(e){
 		$("#user_name").css("border","1px solid #ccc");
 		$(".alert_fail").css("display","none");
