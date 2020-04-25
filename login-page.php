@@ -16,7 +16,7 @@ include("header.php");
 <style>
 body {
     background-color: #f8f8f8;
-    background-image: url("../pictures/image.jpg");
+    background-image: url("pictures/image.jpg");
      margin-top: 0px;
 }
 .login-panel {
